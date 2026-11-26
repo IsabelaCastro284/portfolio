@@ -1,20 +1,20 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     background-color: #d9d9d9;
     font-family: Arial;
     margin: 0;
-    padding: 0;
 }
 
 .portfolio {
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: none;
+    min-height: 100vh;
     background-color: #c5caff;
-    margin: 50px auto;
+    margin: 0;
     padding: 30px;
+    box-sizing: border-box; 
 }
 
 .cabecalho {
@@ -40,7 +40,6 @@ body {
     flex-wrap: wrap;
     gap: 20px;
 }
-
 .card {
     width: 30%;
     min-width: 230px;
@@ -83,7 +82,24 @@ body {
     font-size: 16px;
     margin-top: 25px;
 }
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 20px;
+}
 
+.redes-sociais img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.redes-sociais img:hover {
+    transform: scale(1.15);
+}
 @media (max-width: 768px) {
 
     .portfolio {
@@ -154,5 +170,11 @@ body {
 
     .rodape {
         margin-top: 25px;
+    }
+}
+@media (max-width: 480px) {
+    .redes-sociais img {
+        width: 35px;
+        height: 35px;
     }
 }
